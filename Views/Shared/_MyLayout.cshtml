@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - MVC Assignments</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href ="~/css/Style.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/Images/NET_Core_Logo.svg.png" alt="logo" style="width:50px;">
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Mosab" asp-action="About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Mosab" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Mosab" asp-action="Projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Form" asp-action="FeverCheck">FeverCheck</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Guessing" asp-action="Guessing">Guessing Game</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div>
+        
+         @RenderBody()
+       
+    </div>
+    
+        @*<div class="container-fluid ">
+            <div class="row">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+
+            </div>
+           
+
+        </div>*@
+
+    
+    
+   
+
+
+
+
+  
+
+
+
+
+
+
+
+    <div class="container-fluid">
+
+            <footer class="row border-top footer bg-warning text-dark font-weight-bold">
+                <div class="col-sm-5">
+                    &copy; 2021 - Mosab Al Sherawy - <a asp-area="" asp-controller="Mosab" asp-action="About">About</a>
+                </div>
+                <div class="col-sm-3">
+                    @*<img src="~/Images/ASP-NET-Core-Logo-1.png" alt="ASP.Net Core Logo" style="width:100px;" />*@
+                    <a href="https://www.lexicon.se/Businesscenters/Lexicon-Goteborg/" target="blank"><img src="~/Images/logo-lexicon_2x.gif" alt="Lexicon Logo" style="width:100px;" /></a>
+
+                </div>
+
+                <div class="col-sm-4 text-primary">Current Date and Time: @DateTime.Now</div>
+
+            </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+    @*<footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - ASP.NET_MVC_Assignments - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+            </div>
+        </footer>*@
+
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

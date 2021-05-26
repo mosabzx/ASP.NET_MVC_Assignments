@@ -1,0 +1,40 @@
+﻿
+.fontSize{
+    font-size:18px;
+    font-weight:600;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+ .BodypadAbout{
+     padding:15px;
+     padding-bottom:85px;
+     margin-bottom:auto;
+ }
+
+ .BodayContact{
+     
+    height: 450px; 
+    background-color:darkgray;
+
+ }
+
+ .BodyProjects{
+     color:#333;
+     background-color:beige;
+     padding-bottom:85px;
+ }
+
+ .BodyForm{
+     color:antiquewhite;
+     height:450px;
+     background-color:orangered;
+ }
+
+ .BodyGame{
+     height: 450px;
+     background-color:lightblue;
+ }
+
+ 
+

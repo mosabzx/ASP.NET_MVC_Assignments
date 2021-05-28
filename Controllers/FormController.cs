@@ -15,6 +15,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
         [HttpGet]
         public IActionResult FeverCheck()
         {
+            ViewBag.Message = TempData["Message"];
             return View();
         }
 
@@ -26,19 +27,22 @@ namespace ASP.NET_MVC_Assignments.Controllers
             try
             {
                 string result = FormModel.Check(temp.tempreature, temp.message);
+                string message = $"The Result is : {result}";
 
                 //If the value is not set, the page should not get a message to display, otherwise it should evaluate it and send back the message.
 
-                if (temp.tempreature <= 0)
+                if (temp.tempreature <= 0 && ModelState.IsValid)
                 {
-                    //ViewBag.Message = "Please enter a value."; 
+                    
                 }
                 else
                 {
-                    ViewBag.Message = $"The Result is : {result}";
+                    ViewBag.Message = message;
+                   
                 }
-                
-                return View();
+                TempData["Message"] = ViewBag.Message;
+
+                return RedirectToAction("FeverCheck");
             }
             catch 
             {

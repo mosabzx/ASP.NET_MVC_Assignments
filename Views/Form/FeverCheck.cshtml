@@ -8,22 +8,19 @@
 <div class="container-fluid BodyForm">
     <h1>FeverCheck</h1>
     <form asp-action="FeverCheck">
-       @* <div asp-validation-summary="ModelOnly" class="text-dark"></div>*@ <!--No need-->
+       
         <p>Please enter your tempreature and check whether if you have fever or not.</p>
         <div>
            <label asp-for="tempreature">Tempearture</label>
            <input type="number" asp-for="tempreature" step="any" />
-          @*<div> <span asp-validation-for="tempreature" class="text-dark"></span> </div>*@ <!-- No need -->
         </div>
-        
         <br />
         <input type="submit" value="Check" class="btn btn-primary" />
-        
         <br/>
         <div>@ViewBag.Message</div>
     </form>
 
-    <!--@*name="temperature"*@-->
+    
 
 </div>
 

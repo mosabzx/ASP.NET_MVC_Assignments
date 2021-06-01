@@ -26,6 +26,14 @@ namespace ASP.NET_MVC_Assignments
         {
             services.AddControllersWithViews();
             services.AddSingleton<FormModel>();
+            services.AddSingleton<GuessingGame>();
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +42,7 @@ namespace ASP.NET_MVC_Assignments
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+               
             }
             else
             {
@@ -47,7 +56,7 @@ namespace ASP.NET_MVC_Assignments
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 //endpoints.MapControllerRoute(

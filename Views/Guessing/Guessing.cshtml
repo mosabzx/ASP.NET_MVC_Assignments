@@ -1,14 +1,34 @@
-﻿
+﻿@model GuessingGame
 @{
-    ViewData["Title"] = "Guessing";
+    ViewData["Title"] = "Guessing Game";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
 
 <div class="container-fluid BodyGame">
-
     <h1>Guessing Game</h1>
-   
+    @*<div class="bg-info">@ViewBag.RandomNumber</div>*@ 
+    <div class="form-group col-md-6 ">
+        <form asp-controller="Guessing">
+            <p> Please enter a number to check if you catch the random number!</p>
+            <br />
+            <div>
+                <label asp-for="Input">Enter a number: </label>
+                <input type="number" asp-for="Input" placeholder="Between 1-100" />
+            </div>
+            <br />
+
+            <input type="submit" value="Guess" class="btn btn-success" />
+            <br />
+            <div class="text-primary">@ViewBag.Result</div>
+            <br />
+            <div class="text-danger">@ViewBag.Error</div> 
+            <br />
+            <div>@ViewBag.UserInput</div>
+        </form>
+    </div>
+
+
 </div>
 
 

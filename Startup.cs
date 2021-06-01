@@ -27,6 +27,8 @@ namespace ASP.NET_MVC_Assignments
             services.AddControllersWithViews();
             services.AddSingleton<FormModel>();
             services.AddSingleton<GuessingGame>();
+            services.AddSingleton<PersonsModel>();
+
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {

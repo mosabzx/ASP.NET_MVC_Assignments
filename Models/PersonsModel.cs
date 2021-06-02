@@ -12,16 +12,23 @@ namespace ASP.NET_MVC_Assignments.Models
         public string City { get; set; }
         public int Phone { get; set; }
 
-        List<PersonsModel> PeopleList;
+         List<PersonsModel> PeopleList;
 
         public PersonsModel()
         {
+            
+            
+
+        }
+
+
+        public void Peoples()
+        {
             PeopleList = new List<PersonsModel>()
             {
-
                 new PersonsModel
                 {
-                    Id = 1, Name = "Mosab", City = "Halmstad" , Phone = 0737771507
+                     Id = 1, Name = "Mosab", City = "Halmstad" , Phone = 0737771507
                 },
                 new PersonsModel
                 {
@@ -32,13 +39,8 @@ namespace ASP.NET_MVC_Assignments.Models
                     Id = 3, Name = "Tahoo", City = "Oskarström" , Phone = 0987654321
                 },
 
-
-
             };
-
-
-
-
+            
 
         }
 
@@ -51,7 +53,7 @@ namespace ASP.NET_MVC_Assignments.Models
 
         public PersonsModel Find(int id)
         {
-            var person = PeopleList.SingleOrDefault(p => p.Id == Id);
+            var person = PeopleList.SingleOrDefault(p => p.Id == id);
 
             return person;
         }

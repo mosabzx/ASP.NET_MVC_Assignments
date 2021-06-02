@@ -15,7 +15,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
 
         public PersonsController(PersonsModel Person)
         {
-            person = Person;
+            this.person = Person;
         }
 
 
@@ -23,6 +23,8 @@ namespace ASP.NET_MVC_Assignments.Controllers
         // GET: PersonsController
         public ActionResult Index()
         {
+            PersonsModel person = new PersonsModel();
+            person.Peoples();
             var persons = person.List();
             return View(persons);
         }

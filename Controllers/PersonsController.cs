@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace ASP.NET_MVC_Assignments.Controllers
 {
+    
     public class PersonsController : Controller
     {
-        private readonly PersonsModel person;
+        public PersonsModel person;
 
         public PersonsController(PersonsModel Person)
         {
@@ -40,7 +41,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
 
         // POST: PersonsController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
             try
@@ -61,7 +62,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
 
         // POST: PersonsController/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
             try
@@ -82,7 +83,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
 
         // POST: PersonsController/Delete/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
         {
             try

@@ -24,6 +24,7 @@ namespace ASP.NET_MVC_Assignments
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddControllersWithViews();
             services.AddSingleton<FormModel>();
             services.AddSingleton<GuessingGame>();
@@ -70,9 +71,9 @@ namespace ASP.NET_MVC_Assignments
                     pattern: "{controller=Mosab}/{action=About}/{id?}");
 
                 //endpoints.MapControllerRoute(
-                //    name: "Form",
-                //    pattern: "/form",
-                //    defaults: new { Controllers = "Form", action = "/FeverCheck" });
+                //    name: "People",
+                //    pattern: "/People",
+                //    defaults: new { Controllers = "Persons", action = "/IndexPeople" });
 
             });
         }

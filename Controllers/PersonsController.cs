@@ -16,6 +16,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
         public PersonsController(PersonsModel Person)
         {
             this.person = Person;
+            
         }
 
 
@@ -23,7 +24,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
         // GET: PersonsController
         public ActionResult Index()
         {
-            PersonsModel person = new PersonsModel();
+            
             person.Peoples();
             var persons = person.List();
             return View(persons);
@@ -32,7 +33,9 @@ namespace ASP.NET_MVC_Assignments.Controllers
         // GET: PersonsController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            person.Peoples();
+            var persons = person.Find(id);
+            return View(persons);
         }
 
         // GET: PersonsController/Create
@@ -43,7 +46,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
 
         // POST: PersonsController/Create
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
         {
             try
@@ -64,7 +67,7 @@ namespace ASP.NET_MVC_Assignments.Controllers
 
         // POST: PersonsController/Edit/5
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
         {
             try

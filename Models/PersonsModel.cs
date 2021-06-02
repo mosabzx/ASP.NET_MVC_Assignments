@@ -72,6 +72,11 @@ namespace ASP.NET_MVC_Assignments.Models
             
         }
 
+        public void Erase (int id)
+        {
+            var person = Find(id);
+            PeopleList.Remove(person);
+        }
 
 
     }

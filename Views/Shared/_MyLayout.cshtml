@@ -44,16 +44,19 @@
                     </li>
                 </ul>
             </div>
+            
 
         </nav>
     </header>
 
+    <div class="row">
+        <div class="container-fluid">
 
-    <div>
-        
-         @RenderBody()
-       
+            @RenderBody()
+
+        </div>
     </div>
+    
     
         @*<div class="container-fluid ">
             <div class="row">
@@ -80,23 +83,25 @@
 
 
 
-
+<div class="">
     <div class="container-fluid">
 
-            <footer class="row border-top footer bg-warning text-dark font-weight-bold">
-                <div class="col-sm-5">
-                    &copy; 2021 - Mosab Al Sherawy - <a asp-area="" asp-controller="Mosab" asp-action="About">About</a>
-                </div>
-                <div class="col-sm-3">
-                    @*<img src="~/Images/ASP-NET-Core-Logo-1.png" alt="ASP.Net Core Logo" style="width:100px;" />*@
-                    <a href="https://www.lexicon.se/Businesscenters/Lexicon-Goteborg/" target="blank"><img src="~/Images/logo-lexicon_2x.gif" alt="Lexicon Logo" style="width:100px;" /></a>
+        <footer class="row border-top footer bg-warning text-dark font-weight-bold">
+            <div class="col-sm-5">
+                &copy; 2021 - Mosab Al Sherawy - <a asp-area="" asp-controller="Mosab" asp-action="About">About</a>
+            </div>
+            <div class="col-sm-3">
+                @*<img src="~/Images/ASP-NET-Core-Logo-1.png" alt="ASP.Net Core Logo" style="width:100px;" />*@
+                <a href="https://www.lexicon.se/Businesscenters/Lexicon-Goteborg/" target="blank"><img src="~/Images/logo-lexicon_2x.gif" alt="Lexicon Logo" style="width:100px;" /></a>
 
-                </div>
+            </div>
 
-                <div class="col-sm-4 text-primary">Current Date and Time: @DateTime.Now</div>
+            <div class="col-sm-4 text-primary">Current Date and Time: @DateTime.Now</div>
 
-            </footer>
+        </footer>
     </div>
+</div>
+    
 
 
 

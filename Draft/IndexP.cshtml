@@ -16,6 +16,7 @@
 <p>
     <a asp-action="Create">Add New</a>
     <br />
+    
 </p>
 <table class=" table">
     <thead>
@@ -53,12 +54,13 @@
                     @Html.DisplayFor(modelItem => item.Phone)
                 </td>
                 <td>
-                   
+                    @Html.ActionLink("Filter", "Filter", new { id = item.Id }) |
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
         }
+
 
     </tbody>
 </table>

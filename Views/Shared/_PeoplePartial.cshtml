@@ -1,0 +1,26 @@
+﻿@model ASP.NET_MVC_Assignments.Models.PersonsModel
+
+
+    <ul>
+        <li>
+            @Model.Name
+           
+        </li>
+    </ul>
+    <ul>
+        <li>
+            @Model.City
+        </li>
+    </ul>
+    <ul>
+        <li>
+            @Model.Phone
+        </li>
+        <li>
+            @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+        </li>
+    </ul>
+
+@*<partial name="_PeoplePartial" model="item" />*@
+

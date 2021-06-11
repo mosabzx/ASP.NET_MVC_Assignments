@@ -34,13 +34,13 @@ namespace ASP.NET_MVC_Assignments.Models
 
 
 
-        public void Add(PersonsModel person)
-        {
+        //public void Add(PersonsModel person)
+        //{
             
-            PersonsModel.PeopleList.Add(person);
+        //    PersonsModel.PeopleList.Add(person);
             
            
-        }
+        //}
 
        
         public PersonsModel Find(int id)
@@ -50,33 +50,33 @@ namespace ASP.NET_MVC_Assignments.Models
             return person;
         }
 
-        public PersonsModel Filter(string text,PersonsModel person)
-        {
-            PersonsModel.PeopleList.Where (p => p.Name.Contains(text.ToLowerInvariant()));
-            PersonsModel.PeopleList.Where(p => p.City.Contains(text.ToLowerInvariant()));
+        //public PersonsModel Filter(string text,PersonsModel person)
+        //{
+        //    PersonsModel.PeopleList.Where (p => p.Name.Contains(text.ToLowerInvariant()));
+        //    PersonsModel.PeopleList.Where(p => p.City.Contains(text.ToLowerInvariant()));
 
-            return person;
-        }
+        //    return person;
+        //}
 
         
 
-        public void Erase (int id)
-        {
-            var person = Find(id);
-            PersonsModel.PeopleList.Remove(person);
+        //public void Erase (int id)
+        //{
+        //    var person = Find(id);
+        //    PersonsModel.PeopleList.Remove(person);
 
-            //PeopleList.Remove(Find(id));
+        //    //PeopleList.Remove(Find(id));
 
-            //foreach (var item in PeopleList)
-            //{
-            //    if (item == person)
-            //    {
-            //        PeopleList.Remove(item);
-            //    }
-            //}
+        //    //foreach (var item in PeopleList)
+        //    //{
+        //    //    if (item == person)
+        //    //    {
+        //    //        PeopleList.Remove(item);
+        //    //    }
+        //    //}
 
 
-        }
+        //}
 
 
     }

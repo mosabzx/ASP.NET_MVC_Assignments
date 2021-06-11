@@ -16,8 +16,12 @@
 <p>
     <a asp-action="Create">Add New</a>
     <br />
+    
 </p>
+
+
 <table class=" table">
+    
     <thead>
         <tr>
             <th>
@@ -39,7 +43,8 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <partial name="_PeoplePartial" model="item" />
+            @*<tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
@@ -53,12 +58,13 @@
                     @Html.DisplayFor(modelItem => item.Phone)
                 </td>
                 <td>
-                   
+
                     @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
-            </tr>
+            </tr>*@
         }
+
 
     </tbody>
 </table>

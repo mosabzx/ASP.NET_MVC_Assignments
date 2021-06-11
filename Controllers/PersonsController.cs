@@ -49,6 +49,11 @@ namespace ASP.NET_MVC_Assignments.Controllers
             return View(persons);
         }
         
+        public ActionResult IndexPartial()
+        {
+            var persons = PeopleList;
+            return View(persons);
+        }
 
 
         // GET: PersonsController/Details/5

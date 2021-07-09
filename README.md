@@ -20,4 +20,22 @@ A container to be filled with each view.
  
  Contact – Containing your contact information.
  
- Projects – Containing the assignments and projects you have finished.
+ Projects – Containing the assignments and projects you have finished
+ 
+ 
+ *Forms and Inputs*
+ 
+Add a view to the existing page that takes a temperature in number form, checks how high it is, and tells you whether you have a fever or not. Define a custom route to reach it – “/FeverCheck” should redirect to this new page, rather than having to specify a controller and action.
+
+Required Features:
+
+• A form that takes a single numeric value (float or integer) and sends it on to a controller action.
+
+• The value should be interpreted as a temperature and checked against the thresholds for fever.
+
+• A message should appear on the page, showing whether you have a fever or not.
+
+
+
+
+
